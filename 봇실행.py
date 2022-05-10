@@ -1,4 +1,5 @@
 import discord, time, random, asyncio, requests
+import os
 
 client = discord.Client()
 prefix = "!"
@@ -172,5 +173,6 @@ async def on_message(message):
     f.close()
     print(ID, cmd)
 
-
-client.run("OTczNTM3Nzg1NjMxODk5NjU4.GOuSYV.scQ1KbqLFXzwmMlrOHstBjoSrjRJ2Vayky19XA")
+    
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
